@@ -1,42 +1,43 @@
-import { jest, expect, test, beforeEach, describe } from "@jest/globals";
-import { readFile } from "node:fs/promises";
-import RickAndMortyBRL from "../src/business/integrations/rick-and-morty-brl";
-import axios from "axios";
-import Character from "../src/entities/Character";
-import { type CharacterType } from "../src/entities/Character";
+import { readFile } from 'node:fs/promises';
+import { beforeEach, describe, expect, jest, test } from '@jest/globals';
+import axios from 'axios';
+import RickAndMortyBRL from '../src/business/integrations/rick-and-morty-brl';
+import Character, { type CharacterType } from '../src/entities/Character';
 
-describe("#RickAndMortyBRL", () => {
-  beforeEach(() => {
-    jest.clearAllMocks();
-  });
+describe('#RickAndMortyBRL', () => {
+	beforeEach(() => {
+		jest.clearAllMocks();
+	});
 
-  test("should return a empty array", async () => {
-    const mock = JSON.parse(
-      await readFile("./test/mocks/characters-empty.json", "utf-8")
-    );
+	const rickAndMortyBRL = new RickAndMortyBRL();
 
-    const expected: [] = mock.results;
+	test('should return a empty array', async () => {
+		const mock = JSON.parse(
+			await readFile('./test/mocks/characters-empty.json', 'utf-8'),
+		);
 
-    jest.spyOn(axios, "get").mockResolvedValue({ data: mock });
+		const expected: [] = mock.results;
 
-    const result = await RickAndMortyBRL.execute();
+		jest.spyOn(axios, 'get').mockResolvedValue({ data: mock });
 
-    expect(expected).toStrictEqual(result);
-  });
+		const result = await rickAndMortyBRL.execute();
 
-  test("should return a characters list", async () => {
-    const mock = JSON.parse(
-      await readFile("./test/mocks/characters.json", "utf-8")
-    );
+		expect(expected).toStrictEqual(result);
+	});
 
-    const expected = mock.results.map(
-      (character: CharacterType) => new Character(character)
-    );
+	test('should return a characters list', async () => {
+		const mock = JSON.parse(
+			await readFile('./test/mocks/characters.json', 'utf-8'),
+		);
 
-    jest.spyOn(axios, "get").mockResolvedValue({ data: mock });
+		const expected = mock.results.map(
+			(character: CharacterType) => new Character(character),
+		);
 
-    const result = await RickAndMortyBRL.execute();
+		jest.spyOn(axios, 'get').mockResolvedValue({ data: mock });
 
-    expect(expected).toStrictEqual(result);
-  });
+		const result = await rickAndMortyBRL.execute();
+
+		expect(expected).toStrictEqual(result);
+	});
 });

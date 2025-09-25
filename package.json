@@ -1,24 +1,25 @@
 {
-  "name": "api-consumer",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
-  },
-  "engines": {
-    "node": "NODE_OPTIONS=--experimental-vm-modules npx jest"
-  },
-  "keywords": [],
-  "author": "Gibson Cruz",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^1.12.2"
-  },
-  "devDependencies": {
-    "@jest/globals": "^30.1.2",
-    "jest": "^30.1.3",
-    "ts-jest": "^29.4.4"
-  }
+	"name": "api-consumer",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+	},
+	"engines": {
+		"node": "NODE_OPTIONS=--experimental-vm-modules npx jest"
+	},
+	"keywords": [],
+	"author": "Gibson Cruz",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^1.12.2"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.2.4",
+		"@jest/globals": "^30.1.2",
+		"jest": "^30.1.3",
+		"ts-jest": "^29.4.4"
+	}
 }
