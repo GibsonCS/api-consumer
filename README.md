@@ -65,7 +65,9 @@ Imagine que você precisa consumir dados de duas APIs: uma retorna informações
 
 - [Adapter Pattern - Refactoring Guru](https://refactoring.guru/pt-br/design-patterns/adapter)
 
-## Exemplos de uso
+## Exemplo de saída
+
+![alt text](image.png)
 
 ### Executando testes de cobertura
 
