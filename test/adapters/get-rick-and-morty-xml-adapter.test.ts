@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, jest, test } from '@jest/globals';
-import GetRickAndMortyXMLAdapter from '../../src/business/integrations/adapters/get-rick-and-morty-xml-adapter';
-import GetRickAndMortyXML from '../../src/business/integrations/get-rick-and-morty-xml';
+import GetRickAndMortyXMLAdapter from '../../src/business/integrations/adapters/get-rick-and-morty-xml-adapter.ts';
+import GetRickAndMortyXML from '../../src/business/integrations/get-rick-and-morty-xml.ts';
 
 describe('#GetRickAndMortyXMLAdapter', () => {
 	beforeEach(() => {

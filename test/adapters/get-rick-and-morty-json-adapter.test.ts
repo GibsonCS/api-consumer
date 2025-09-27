@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, jest, test } from '@jest/globals';
-import GetRickAndMortyJSONAdapter from '../../src/business/integrations/adapters/get-rick-and-morty-json-adapter';
-import GetRickAndMortyJSON from '../../src/business/integrations/rick-and-morty-brl';
+import GetRickAndMortyJSONAdapter from '../../src/business/integrations/adapters/get-rick-and-morty-json-adapter.ts';
+import GetRickAndMortyJSON from '../../src/business/integrations/rick-and-morty-brl.ts';
 
 describe('#GetRickAndMortyJSONAdapter', () => {
 	beforeEach(() => {

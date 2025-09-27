@@ -1,8 +1,8 @@
 import { readFile } from 'node:fs/promises';
 import { beforeEach, describe, expect, jest, test } from '@jest/globals';
 import axios from 'axios';
-import RickAndMortyBRL from '../src/business/integrations/rick-and-morty-brl';
-import Character, { type CharacterType } from '../src/entities/Character';
+import RickAndMortyBRL from '../src/business/integrations/rick-and-morty-brl.ts';
+import Character, { type CharacterType } from '../src/entities/Character.ts';
 
 describe('#RickAndMortyBRL', () => {
 	beforeEach(() => {
