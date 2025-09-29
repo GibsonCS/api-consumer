@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import { beforeEach, describe, expect, jest, test } from '@jest/globals';
 import axios from 'axios';
-import RickAndMortyBRL from '../src/business/integrations/rick-and-morty-brl.ts';
+import GetRickAndMortyBRL from '../src/business/integrations/get-rick-and-morty-brl.ts';
 import Character, { type CharacterType } from '../src/entities/Character.ts';
 
 describe('#RickAndMortyBRL', () => {
@@ -9,7 +9,7 @@ describe('#RickAndMortyBRL', () => {
 		jest.clearAllMocks();
 	});
 
-	const rickAndMortyBRL = new RickAndMortyBRL();
+	const rickAndMortyBRL = new GetRickAndMortyBRL();
 
 	test('should return a empty array', async () => {
 		const mock = JSON.parse(
